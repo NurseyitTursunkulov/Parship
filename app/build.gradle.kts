@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.parship"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.parship"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -66,4 +66,8 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+    implementation("io.insert-koin:koin-androidx-compose:3.5.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0-beta01")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.2")
+
 }
