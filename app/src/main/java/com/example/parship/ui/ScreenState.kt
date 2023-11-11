@@ -7,5 +7,5 @@ package com.example.parship.ui
  */
 enum class ScreenState(val title: String){
      Parship( "Parship"),
-     ElitePartner( "ElitePartner")
+     ElitePartner( "Elitepartner")
 }

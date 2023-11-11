@@ -24,18 +24,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             ParshipTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Box(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .padding(16.dp),
+                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+                    Box(modifier = Modifier.fillMaxSize().padding(16.dp),
                         contentAlignment = Alignment.Center
                     ) {
-
-//                    Greeting("Android")
                         ParshipScreen()
                     }
                 }
@@ -45,16 +37,10 @@ class MainActivity : ComponentActivity() {
 }
 
 
-
-@Composable
-fun ViewModelInject( viewModel: ButtonViewModel = koinViewModel()){
-//    Text(text = viewModel.screenState, modifier = Modifier.padding(8.dp))
-}
-
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     ParshipTheme {
-//        Greeting("Android")
+        ParshipScreen()
     }
 }
