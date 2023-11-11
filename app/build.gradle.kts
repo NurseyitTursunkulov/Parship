@@ -69,5 +69,5 @@ dependencies {
     implementation("io.insert-koin:koin-androidx-compose:3.5.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0-beta01")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.2")
-
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.1")
 }
