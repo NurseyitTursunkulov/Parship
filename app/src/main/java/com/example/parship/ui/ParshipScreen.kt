@@ -47,17 +47,17 @@ fun ParshipTitle(screenState: ScreenState, modifier: Modifier = Modifier) {
     AnimatedContent(targetState =screenState, label = "",modifier = modifier, transitionSpec = {
         fadeIn(animationSpec = tween(320, delayMillis = 90))  with
                 fadeOut(animationSpec = tween(90))
-    }) {screenState->
-        when (screenState) {
-            ScreenState.Parship -> Text(
-                text = screenState.title,
+    }) {screenStateAnimated->
+        when (screenStateAnimated) {
+            ScreenState.Parship -> ParshipText(
+                text = screenStateAnimated.title,
                 modifier = modifier,
-                color = Color.Red,
+                color = screenStateAnimated.color,
             )
             ScreenState.ElitePartner -> ParshipText(
-                text = screenState.title,
+                text = screenStateAnimated.title,
                 modifier = modifier,
-                color = MaterialTheme.colorScheme.primary,
+                color = screenStateAnimated.color,
             )
         }
     }
