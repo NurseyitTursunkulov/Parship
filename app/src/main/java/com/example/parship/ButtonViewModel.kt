@@ -13,7 +13,10 @@ import kotlinx.coroutines.launch
  */
 class ButtonViewModel : ViewModel() {
     var screenState: MutableStateFlow<ScreenState> = MutableStateFlow(ScreenState.Parship)
-
+companion object{
+    const val PARSHIP_TEXT = "Parship"
+    const val ELITE_PARTNER_TEXT = "Elitepartner"
+}
     fun toggleText() {
         viewModelScope.launch {
             if (screenState.value == ScreenState.Parship)

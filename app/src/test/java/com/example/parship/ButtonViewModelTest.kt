@@ -1,6 +1,8 @@
 package com.example.parship
 
 import androidx.compose.ui.graphics.Color
+import com.example.parship.ButtonViewModel.Companion.ELITE_PARTNER_TEXT
+import com.example.parship.ButtonViewModel.Companion.PARSHIP_TEXT
 import com.example.parship.ui.ScreenState
 import kotlinx.coroutines.Dispatchers
 import org.junit.After
@@ -30,11 +32,14 @@ class ButtonViewModelTest {
         val viewModel = ButtonViewModel()
         assert(viewModel.screenState.value == ScreenState.Parship)
         assert(viewModel.screenState.value.color == Color.Red)
+        assert(viewModel.screenState.value.title == PARSHIP_TEXT)
         viewModel.toggleText()
         assert(viewModel.screenState.value.color == Color.Blue)
         assert(viewModel.screenState.value == ScreenState.ElitePartner)
+        assert(viewModel.screenState.value.title == ELITE_PARTNER_TEXT)
         viewModel.toggleText()
         assert(viewModel.screenState.value == ScreenState.Parship)
+        assert(viewModel.screenState.value.title == PARSHIP_TEXT)
         assert(viewModel.screenState.value.color == Color.Red)
     }
 }

@@ -1,6 +1,8 @@
 package com.example.parship.ui
 
 import androidx.compose.ui.graphics.Color
+import com.example.parship.ButtonViewModel.Companion.ELITE_PARTNER_TEXT
+import com.example.parship.ButtonViewModel.Companion.PARSHIP_TEXT
 
 
 /**
@@ -8,6 +10,6 @@ import androidx.compose.ui.graphics.Color
  * ScreenState
  */
 enum class ScreenState(val title: String,val color: Color){
-     Parship( "Parship", Color.Red),
-     ElitePartner( "Elitepartner", Color.Blue)
+     Parship( PARSHIP_TEXT, Color.Red),
+     ElitePartner( ELITE_PARTNER_TEXT, Color.Blue)
 }
